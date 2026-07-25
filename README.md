@@ -16,3 +16,13 @@ If yes, then this page is for you.
 2. Continuous internet connection.
 3. A static IP.
 4. Patience.
+
+### NGINX - Installation
+What is NGINX? 
+> NGINX is a popular open-source software used as a web server, reverse proxy, load balancer, and content cache. It is widely used because it handles massive amounts of simultaneous web traffic quickly while using very little computer memory. 
+#### Installing NGINX
+To install NGINX, use the folling command on your Raspberry PI:
+```
+sudo apt update
+sudo apt install nginx
+```
