@@ -89,6 +89,7 @@ On the other hand, if you have a screen connected to your Raspberry Pi via HDMI,
 ![Raspberry Pi Board LED ](imgs/pi1.png)
 18. Once the green LED starts flashing, you can now unplug the power supply from the Raspberry Pi. ***Make sure you unplug the power cable, and NOT the SD Card.***
 19. Only after powering off, you can now safely remove the SD Card. We won't need it anymore.
-20. Connect your SSD to your PC using the SATA to USB3 adapter.\ 
+20. Connect your SSD to your PC using the SATA to USB3 adapter.
+
 ![Raspberry Pi Board LED ](imgs/ssd.jpeg)
 >If you are getting a message to format the SSD, don't worry about it, you can ignore it. The Pi Imager software will format it anyway.
