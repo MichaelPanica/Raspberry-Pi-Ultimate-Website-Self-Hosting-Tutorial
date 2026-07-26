@@ -1,4 +1,4 @@
-![](host.png)
+![](imgs/host.png)
 # This is a tutorial on how to host your own website on a Raspberry Pi using your own domain.
 Did you ever asked yourself how to host a website without having to pay those expensives hosts and try to spend as less money as possible, without having to keep your computer on all day to host a website? \
 If yes, then this page is for you.
@@ -39,7 +39,7 @@ Do I need to know linux commands?
 5. SD Card (4GB+) - We won't need this for long.
 6. SD Card to USB Adapter. There are many choices and models online, they are all the same, as long as they do the job.
 5. Raspberry Pi 7" Touchscreen (optional, totally not needed for our project but useful if you want to have a weather station, Home Assistant Implementations etc.)
-![requirements image](requirements.png)
+![requirements image](imgs/requirements.png)
 
 ### Installation - Ubuntu OS on Raspberry Pi.
 To install Ubuntu on your Raspberry Pi you will need:\
@@ -52,21 +52,21 @@ __INSTALLATION STEPS__
 2. Install it.
 3. Connect your SD Card to your computer.\
 >In my case, the SD Card is mounted on (J:)\
-![Raspberry PI Imager](sd.jpeg)
+![Raspberry PI Imager](imgs/sd.jpeg)
 4. Open Raspberry Pi Imager. \
 You will now see this: 
-![Raspberry PI Imager](imager.png)
+![Raspberry PI Imager](imgs/imager.png)
 > If you see random characters like mine (? NNMNROMLQ), just ignore them. I don't know why it looks like that, it might be from my side only.
 5. Choose your device. In my case, I am using a Raspberry Pi 4, so I will chose the second option. 
 6. Click Next (or LCVR in my case - don't ask, I dont know why it looks like this.)\
-![Raspberry PI Imager](imager2.png)
+![Raspberry PI Imager](imgs/imager2.png)
 7. In the OS menu, we have to install a bootloader on the SD Card first. Scroll down until you find ***MISC UTILITY IMAGES*** and click on it. It should take you to the next section. If it doesn't, just click ***NEXT***\
-![Raspberry PI Imager](imgr3.png)
+![Raspberry PI Imager](imgs/imgr3.png)
 8. Select ***Bootloader (Pi 4 Family)***
 >It might say something else depending on the Pi you're using.\
-![Raspberry PI Imager](imgr4.png)
+![Raspberry PI Imager](imgs/imgr4.png)
 9. Select the SD Card you have connected to your PC in ***step 3***, and click next.
 >Since mine is in J: and it's a 32gb SD Card, I will select the second option.\
-![Raspberry PI Imager](imgr5.png)
+![Raspberry PI Imager](imgs/imgr5.png)
 10. Enter the desired name for the Raspberry Pi. This can be any name you wish. Make sure you remember it and click ***next*** after you wrote it.\
-![Raspberry PI Imager](imgr6.png)
+![Raspberry PI Imager](imgs/imgr6.png)
