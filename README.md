@@ -1,3 +1,5 @@
+# ***THIS PROJECT IS CURRENTLY IN PROGRESS - PLEASE DON'T USE IT YET.***
+
 ![](imgs/host.png)
 # This is a tutorial on how to host your own website on a Raspberry Pi using your own domain.
 Did you ever asked yourself how to host a website without having to pay those expensives hosts and try to spend as less money as possible, without having to keep your computer on all day to host a website? \
@@ -90,6 +92,5 @@ On the other hand, if you have a screen connected to your Raspberry Pi via HDMI,
 18. Once the green LED starts flashing, you can now unplug the power supply from the Raspberry Pi. ***Make sure you unplug the power cable, and NOT the SD Card.***
 19. Only after powering off, you can now safely remove the SD Card. We won't need it anymore.
 20. Connect your SSD to your PC using the SATA to USB3 adapter.
-
 ![Raspberry Pi Board LED ](imgs/ssd.jpeg)
 >If you are getting a message to format the SSD, don't worry about it, you can ignore it. The Pi Imager software will format it anyway.
