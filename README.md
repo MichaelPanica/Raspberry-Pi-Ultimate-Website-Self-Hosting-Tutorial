@@ -41,8 +41,8 @@ Do I need to know linux commands?
 5. Raspberry Pi 7" Touchscreen (optional, totally not needed for our project but useful if you want to have a weather station, Home Assistant Implementations etc.)
 ![requirements image](imgs/requirements.png)
 
-### Installation - Ubuntu OS on Raspberry Pi.
-To install Ubuntu on your Raspberry Pi you will need:\
+## Installation - Ubuntu OS on Raspberry Pi.
+To install Ubuntu on your Raspberry Pi you will need:
 1. Raspberry Pi Imager. [Download from Official Website](https://www.raspberrypi.com/software/)
 2. SATA to USB3 Adapter
 3. SSD (250GB+ Recommended for scalability and huge websites with lots of images)
@@ -62,11 +62,33 @@ You will now see this:
 ![Raspberry PI Imager](imgs/imager2.png)
 7. In the OS menu, we have to install a bootloader on the SD Card first. Scroll down until you find ***MISC UTILITY IMAGES*** and click on it. It should take you to the next section. If it doesn't, just click ***NEXT***\
 ![Raspberry PI Imager](imgs/imgr3.png)
-8. Select ***Bootloader (Pi 4 Family)***
+8. Select ***Bootloader (Pi 4 Family)***.
 >It might say something else depending on the Pi you're using.\
 ![Raspberry PI Imager](imgs/imgr4.png)
-9. Select the SD Card you have connected to your PC in ***step 3***, and click next.
+9. Select ***Select USB Boot*** and click next.
+![Raspberry PI Imager](imgs/imgr4-1.png)
+
+10. Select the SD Card you have connected to your PC in ***step 3***, and click next.
 >Since mine is in J: and it's a 32gb SD Card, I will select the second option.\
 ![Raspberry PI Imager](imgs/imgr5.png)
-10. Enter the desired name for the Raspberry Pi. This can be any name you wish. Make sure you remember it and click ***next*** after you wrote it.\
-![Raspberry PI Imager](imgs/imgr6.png)
+11. Double check the details and make sure they match, and click next. ***You must make sure the Operating system is USB BOOT***.\
+![Raspberry PI Imager](imgs/imgr7.png)
+12. Make sure you understand that **once you write the image, everything will be erased on that SD Card**, and click the red button.\
+![Raspberry PI Imager](imgs/imgr8.png)
+
+13. Wait for the Imager to write the image on the SD Card.
+14. Once completed, you will see this screen. Click on the red button to close the app and **eject the SD Card**.\
+![Raspberry PI Imager](imgs/imgr9.png)
+
+15. Insert the SD Card into your Raspberry Pi.\
+![Raspberry PI SD Location](https://www.raspberrypi.com/documentation/computers/images/peripherals/sd-card.png?hash=55bfa3fdcf4c6131e843b4a9f5656a2e)
+16. Power on your Raspberry Pi by plugging the power cable in the USB C Power Supply.\
+![Raspberry PI SD Location](https://ofmarginalinterest.wordpress.com/wp-content/uploads/2022/06/pipower.jpg)
+17. Once the Pi has been turned on, it will now copy the bootloader code into the Raspberry Pi. **Keep an eye on the green LED**. Once it's finished you will see the green LED flashing continuously. 
+On the other hand, if you have a screen connected to your Raspberry Pi via HDMI, you will see a green screen. That is totally normal. On the following image, the green LED is marked as "ACT".\
+![Raspberry Pi Board LED ](imgs/pi1.png)
+18. Once the green LED starts flashing, you can now unplug the power supply from the Raspberry Pi. ***Make sure you unplug the power cable, and NOT the SD Card.***
+19. Only after powering off, you can now safely remove the SD Card. We won't need it anymore.
+20. Connect your SSD to your PC using the SATA to USB3 adapter. 
+![Raspberry Pi Board LED ](imgs/ssd.jpeg)
+>If you are getting a message to format the SSD, don't worry about it, you can ignore it. The Pi Imager software will format it anyway.
