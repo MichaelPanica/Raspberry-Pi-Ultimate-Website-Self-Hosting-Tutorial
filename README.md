@@ -9,7 +9,9 @@ If yes, then this page is for you.
 [2. FAQ](#2-faq)\
 [3. Requirements](#3-requirements)\
 [4. Installation - Ubuntu OS on Raspberry Pi](#4-installation---ubuntu-os-on-raspberry-pi)\
-[5. Minor Tweaks - Desktop OS Only](#5-minor-tweaks---dekstop-os-only)
+[5. Minor Tweaks - Desktop OS Only](#5-minor-tweaks---dekstop-os-only)\
+[6.Installing NGINX](#6-installing-nginx)\
+[7. Control Panel Installation.](#7-control-panel-installation.)\
 
 
 ## 1. What will you learn from this? 
@@ -184,14 +186,40 @@ When asked if you want to continue, type "yes" and press **enter**.
 >Note: You won't see your password when you're typing it. It's completely normal. 
 4. Notice the terminal is now showing us as *user@host*. That means we are now connected to the Pi and controlling it. __We are no longer in Windows Command Prompt, but we are in Ubuntu!__. 
 ![PI ssh connection](imgs/cmd3.png)
-5. Type the following commands and press **enter** after each command. **Enter the password if prompted**.
+5. Time to update our OS. Type the following commands and press **enter** after each command. **Enter the password if prompted**.
 ```
 sudo apt update
 sudo apt upgrade
 ```
 ![PI ssh connection](imgs/cmd4.png)
 >If asked if Continue, type "Y" and press enter. 
-
 The OS is now getting updated. Wait until it finishes. This is the equivalent of updating your Windows.
 ![PI ssh connection](imgs/cmd5.png)
 
+6. To install NGINX, type the following commands and press **Enter** (**Remember to type "Y" and press enter if asked to continue**)
+```
+sudo apt install nginx
+```
+
+![PI ssh connection](imgs/cmd6.png)
+7. Check your NGINX is up and running. Type the following command. You should see a similar output like in my picture.  
+```
+systemctl status nginx
+```
+![PI ssh connection](imgs/cmd7.png)
+8. Press **CTRL+C** to leave the NGINX output. 
+9. To test your own NGINX page, you first need to get your own public IP. If you don't know it, use the following command.
+```
+curl -4 icanhazip.com
+``` 
+![PI ssh connection](imgs/cmd8.png)
+>It will return your public IP. You can now copy and paste that IP into your browser’s address bar: 
+```
+http://your_server_ip
+```
+You should now see a page that looks like this:
+![NGINX Result](https://ubuntucommunity.s3.us-east-2.amazonaws.com/optimized/2X/7/7504d83a9fe8c09d861b2f7c49e144ac773f0c0d_2_800x334.png)
+
+***Congratulations!*** You are now hosting your own website! However, we don't want people to look for our website by using an IP adress, right? In this case, get ready for the next step.
+
+## 7. Control Panel Installation.
