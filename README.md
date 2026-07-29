@@ -20,6 +20,9 @@ If yes, then this page is for you.
 7.2 [More Documentation Links](#72-more-documentation-links)\
 7.3 [Personal Choice](#73-personal-choice)\
 7.4 [aaPanel Installation](#74-aapanel-instalation)\
+7.5 [aaPanel Configuration](#75-aapanel-configuration)\
+7.6 [aaPanel Website Creation.](#76-aapanel-website-creation76)
+8. [Port Forwarding](#8-port-forwarding)
 
 ## 1. What will you learn from this?
 
@@ -364,3 +367,35 @@ I will personally choose **PHP Project** for this tutorial.\
 ![aaPanel Configuration](imgs/aap12.png)
 5. Wait for the NGINX to install. This will take around 10 minutes, so just be patient.\
 ![aaPanel Configuration](imgs/aap13.png)
+6. Once finished, you will now see a red button with the text **NGINX X.XX.X**. If you hover that button, you will see the following options: *Start / Restart / Reload / Alarm Setting*. That means NGX has been sucessfully installed, but it's not running - and that's okay, we need to manually start it.\
+![aaPanel Configuration](imgs/aap14.png)
+7. Click on "**Add site**".\
+![aaPanel Configuration](imgs/aap15.png)
+8. In the following screen, make sure you type the domain **and all subdomains** you want for your website. In my case, I want to use **michaelpanica.dev**, **www.michaelpanica.dev**, and **admin.michaelpanica.dev** to access the aaPanel remotely. **Make sure to also enable "Apply for SSL"**.
+- For the **Description** and **Website Path** sections, let it complete automatically. Don't change anything.\
+![aaPanel Configuration](imgs/aap16.png)
+- You can create an **FTP (File Transfer Protocol)** to easily transfer files. You can do this in the following step:
+
+9. **FTP (File Transfer Protocol**. Click on "FTP is not installed, Click to install".\
+![aaPanel Configuration](imgs/aap17.png)
+10. **FTP (File Transfer Protocol** Select the latest version of Pure-Ftpd and click **install now**.\
+![aaPanel Configuration](imgs/aap18.png)
+11. Wait for the installation to finish.\
+![aaPanel Configuration](imgs/aap19.png)
+12. When finished, the Messages box will now be empty saying "Currently no tasks!". Close this menu and return to the previous menu.\
+![aaPanel Configuration](imgs/aap20.png)
+13. Here, on the "**FTP**" section, click on "**Not create**" and change it to "**Create**".\
+![aaPanel Configuration](imgs/aap22.png)
+14. In **FTP Settings** and **Password** fields, change them to your likings. You will use these to login via FTP and transfer files.\
+![aaPanel Configuration](imgs/aap23.png)
+15. Make sure that:
+- Database is not created (unless you need one).
+- PHP Version is **Static**.
+- Site Category is **Default Category**.
+- Create HTML File is **enabled**.
+16. Click on **Confirm** to create the first website. 
+17. When you see this message, that means you have created your first website! **Congratulations!**. The username and password are to connect to FTP.\
+![aaPanel Configuration](imgs/aap24.png)
+
+**Congratulations!** You have just installed your first website!
+
