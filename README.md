@@ -399,3 +399,43 @@ I will personally choose **PHP Project** for this tutorial.\
 
 **Congratulations!** You have just installed your first website!
 
+## 8. Port Forwarding
+In order for our visitors to access our website, we must make the Raspberry Pi discoverable for WAN traffic. At the moment, it can only be accessed on our internal network. We can access the website by the **local IP** (192.168.1.1 for example), but we're not able to use the **public IPv4**.\
+![Port Forwarding Explained](imgs/pf2.png)
+
+In order to do that, we have to do some tweaks in our Router to make the port reachable. 
+
+1. On Windows, open **Command Prompt**.
+2. Type the following command and press **enter**:
+```
+ipconfig
+```
+3. Find **Default Gateway**, copy the IP starting with 192. and paste the IP in a browser window.
+![Windows CMD](imgs/cmd12.png)
+4. Login to your ISP Device (router) by using the password. Normally the password should be on the router itself. **Interface will look different depending on the manufacturer**.\
+![Port Forwarding](imgs/pf3.png)
+5. Navigate your router and find something port-forwarding related. If you can't find it, google your router model. For my **specific Fritz!Box model**, I can find Port Sharing (also called Port Forwarding) in ***Internet > Permit Access > Port Sharing***.
+![Port Forwarding](imgs/pf4.png)
+6. Click on **Add device for sharing** 
+7. In the Device menu, select your Raspberry Pi. The name will be the same as you gave it to the hostname in the OS Installation steps.\
+![Port Forwarding](imgs/pf5.png)
+8. Click on **New Sharing**. 
+9. Select HTTP Server if it asks you for an Application, or simply type **80 - 80** for ports and make sure you have Enabled Sharing enabled.\
+![Port Forwarding](imgs/pf6.png)
+![Port Forwarding](imgs/pf7.png)
+10. Click OK
+11. Click on "New Sharing" once again to add another port and Protocol.\
+![Port Forwarding](imgs/pf8.png)
+12. This time select HTTPS Server with the ports being **443 - 443**, Enabled Sharing enabled.\
+![Port Forwarding](imgs/pf9.png)
+13. Click OK again.
+14. Click on Apply. 
+15. Depending on your interface, there should be a sign the ports are up and running. For my device, I have these green lights next to the names that are telling me that they're open and can be accessed.\
+![Port Forwarding](imgs/pf10.png)
+16. **Time to test if we're online.** Head over to [portchecker](https://portchecker.co/).
+17. It should automatically take your Public (IPv4) IP. Type port 80 in the **Port number** tab and press **Check**. If you're getting a message saying "**Port 80 is OPEN**", then we're all good!\
+![Port Forwarding](imgs/pf11.png)
+18. Open an **incognito browser page** and type your public IP. 
+19. You should now see the **Welcome to NGINX** page on your public IP.\
+![Port Forwarding](imgs/pf12.png)
+20. **Congratulations!** You have successfully opened the port for the webserver to be accessed online!
