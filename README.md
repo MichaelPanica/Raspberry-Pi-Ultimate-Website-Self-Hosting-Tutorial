@@ -114,7 +114,7 @@ To install Ubuntu on your Raspberry Pi you will need:
     ![Raspberry Pi Board LED ](imgs/pi1.png)
 18. Once the green LED starts flashing, you can now unplug the power supply from the Raspberry Pi. **_Make sure you unplug the power cable, and NOT the SD Card._**
 19. Only after powering off, you can now safely remove the SD Card. We won't need it anymore.
-20. Connect your SSD to your PC using the SATA to USB3 adapter.
+20. Connect your SSD to your PC using the SATA to USB3 adapter.\
     ![Raspberry Pi Board LED ](imgs/ssd.jpeg)
     > If you are getting a message to format the SSD, don't worry about it, you can ignore it. The Pi Imager software will format it anyway.
 21. Open **Raspberry PI Imager**.
@@ -135,7 +135,7 @@ To install Ubuntu on your Raspberry Pi you will need:
     ![Raspberry PI Imager](imgs/imgr16.png)
 30. **Customisation: SSH Authentication -** Enable your SSH Autenthication and click **Next**. This will allow us to connect to our Raspberry Pi remotely. _I recommend using the **Use password authentication** for easier access._
     ![Raspberry PI Imager](imgs/imgr17.png)
-31. **Customisation: Raspberry Pi Connect -** IF YOU ARE USING A MONITOR, I recommend using the Raspberry Pi Connect to connect to your Pi and control the desktop remotely. If you don't have a Desktop OS, you can skip this step.
+31. **Customisation: Raspberry Pi Connect -** IF YOU ARE USING A MONITOR, I recommend using the Raspberry Pi Connect to connect to your Pi and control the desktop remotely. If you don't have a Desktop OS, you can skip this step.\
     ![Raspberry PI Imager](imgs/imgr18.png)
     > NOTE: You will need to create an account on the Raspberry Pi website in order to receive an Authentication Token.
 32. **Write Image -** Review all the settings and click **Next**. This will now write the image on the connected SSD.  
@@ -317,7 +317,7 @@ Type **yes** and press enter to continue the installation.
 5. Once installation is done, you will see these messages: 
 ![PI ssh connection](imgs/cmd11.png)
 >**Parts of the aaPanel URL has been censored. Those ports, access keys, username and password will be different, and they represent a security risk. Keep them safe and private.**
-6. Congratulations! You have just installed **aaPanel** on your Raspberry Pi.
+6. ***Congratulations!*** You have just installed **aaPanel** on your Raspberry Pi.
 ### 7.5 aaPanel Configuration
 It is now time to ***access and configure*** the aaPanel. The username and password can be a bit annoying to remember, so let's go ahead and set them up however we like.
 1. Click on the **aaPanel Internal Address Link.** (try ctrl+click if normal click doesn't work)
@@ -342,3 +342,6 @@ It is now time to ***access and configure*** the aaPanel. The username and passw
 ![aaPanel Configuration](imgs/aap9.png)
 11. Login once again with both your **new username and password**.\
 ![aaPanel Configuration](imgs/aap10.png)
+12. ***Congratultions!*** You have successfuly configured your aaPanel with your desired username and password!
+
+### 7.6 aaPanel Website Creation.
