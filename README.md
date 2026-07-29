@@ -345,3 +345,22 @@ It is now time to ***access and configure*** the aaPanel. The username and passw
 12. ***Congratultions!*** You have successfuly configured your aaPanel with your desired username and password!
 
 ### 7.6 aaPanel Website Creation.
+It is now time to create our first website! Kind of. Let me explain.\
+In **aaPanel**, we can create a website by allocating a web server. In our case, the web server we're using is **NGINX**. We're **not** making a website by the classic coding or one-click install, but we're letting aaPanel know that we have **one web server for ONE website**.\
+If it's too confusing, I promise you'll get the concept while practicing.
+
+**Question:** Why can't we create the website simply by uploading the webfiles that we have?\
+**Answer:** Because aaPanel is not a "one-click install" all-solutions software. It is a control panel that allows us to **host multiple websites on multiple web server engines**. This is also something called *"Shared Hosting"*.\
+![Web Hosting Explanaition](imgs/exp1.png)
+
+Let's go ahead and practice. 
+1. On the left-hand menu, select **Website**.
+2. According to your needs, you will have to choose between *PHP Project*, *Node.js Project*, *Proxy Project*, *Go Project* or *Python Project*.\
+I will personally choose **PHP Project** for this tutorial.\
+![aaPanel Configuration](imgs/aap11.png)
+3. In the **PHP Project**, we have to choose between installing NGINX or Apache. 
+>⚠️ NOTE ⚠️ You must choose the engine that fits your goals. Long story short: **Apache** is the older, very flexible web server, while **NGINX** is the newer, very fast and lightweight one ***(Sounds pretty convenient for our Raspberry Pi project, right?)***.  Here's a [comparasion article](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations) between the two of them.
+4. For my needs, I will install ***NGINX***. Click on ***Install NGINX*** button and then click on ***Quick install*** button. Make sure you are on the *latest version available from the version drop menu.\
+![aaPanel Configuration](imgs/aap12.png)
+5. Wait for the NGINX to install. This will take around 10 minutes, so just be patient.\
+![aaPanel Configuration](imgs/aap13.png)
