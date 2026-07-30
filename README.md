@@ -16,13 +16,14 @@ If yes, then this page is for you.
 5. [Minor Tweaks - Desktop OS Only](#5-minor-tweaks---dekstop-os-only)
 6. [Installing NGINX](#6-installing-nginx)
 7. [Control Panel Installation.](#7-control-panel-installation.)\
-7.1 [Control Panels Comparison Table](#71-control-panels-comparison-table)\
-7.2 [More Documentation Links](#72-more-documentation-links)\
-7.3 [Personal Choice](#73-personal-choice)\
-7.4 [aaPanel Installation](#74-aapanel-instalation)\
-7.5 [aaPanel Configuration](#75-aapanel-configuration)\
-7.6 [aaPanel Website Creation.](#76-aapanel-website-creation76)
+   7.1 [Control Panels Comparison Table](#71-control-panels-comparison-table)\
+   7.2 [More Documentation Links](#72-more-documentation-links)\
+   7.3 [Personal Choice](#73-personal-choice)\
+   7.4 [aaPanel Installation](#74-aapanel-instalation)\
+   7.5 [aaPanel Configuration](#75-aapanel-configuration)\
+   7.6 [aaPanel Website Creation.](#76-aapanel-website-creation76)
 8. [Port Forwarding](#8-port-forwarding)
+9. [Domain Registration & DNS Records.](#9-domain-registration--dns-records)
 
 ## 1. What will you learn from this?
 
@@ -257,23 +258,25 @@ When it comes to choosing a Control Panel, there are multiple choices on the int
 
 Here's a table with the most famous Control Panels available as well as some links for you to read and document yourself before taking action.
 
-***⚠️ NOTE ⚠️*** In this tutorial I will install aaPanel, therefore **all the commands used are for aaPanel only**. All other panels have their own commands in order to be installed, so please read the documentation on the desired panel you're willing to installed.
+**_⚠️ NOTE ⚠️_** In this tutorial I will install aaPanel, therefore **all the commands used are for aaPanel only**. All other panels have their own commands in order to be installed, so please read the documentation on the desired panel you're willing to installed.
+
 ### 7.1 Control Panels Comparison Table
-| 🛠️ Control Panel | 🔓 Open Source | 🌐 Web Server Support | 🐧 OS Support | 📦 Docker / Containers | 📧 Email Hosting | 🌍 DNS Management | 🎯 Best Use Case |
-|---|---|---|---|---|---|---|---|
-| **aaPanel** | ✅ Yes | Nginx, Apache, OpenLiteSpeed | CentOS / Debian / Ubuntu | ✅ Yes | ✅ Yes | ✅ Yes | Easy LAMP/LNMP management |
-| **HestiaCP** | ✅ Yes | Nginx + Apache | Debian / Ubuntu | ⚠️ Community support | ✅ Yes | ✅ Yes | Lightweight shared hosting |
-| **ISPConfig** | ✅ Yes | Apache, Nginx, Lighttpd | Debian / Ubuntu / CentOS | ⚠️ Emerging support | ✅ Yes | ✅ Yes | Multi-server shared hosting |
-| **ApisCP** | 🟡 Core OSS / 💰 Pro | Apache | CentOS / AlmaLinux | ✅ Yes | ✅ Yes | ✅ Yes | Enterprise-grade hosting |
-| **Spikster** | ✅ Yes | Nginx | Linux VPS / Cloud | ✅ Yes | ✅ Yes | ✅ Yes | Modern PHP app hosting |
-| **Virtualmin** | ✅ Yes | Apache / Nginx | Debian / CentOS | ⚠️ Partial | ✅ Yes | ✅ Yes | Flexible enterprise panel |
-| **VitoDeploy** | ✅ Yes | Nginx | Ubuntu | ✅ Yes | ❌ No | ❌ No | Docker-first deployments |
-| **CyberPanel** | ✅ Yes | OpenLiteSpeed | CentOS / Ubuntu | ✅ Yes | ✅ Yes | ✅ Yes | High-performance hosting |
-| **Coolify** | ✅ Yes | Reverse proxy based | Ubuntu / Debian | ✅ Yes | ❌ No | ❌ No | Self-hosted PaaS |
-| **FASTPANEL** | 🆓 Freeware | Nginx | Debian / Ubuntu | ⚠️ Limited | ✅ Yes | ✅ Yes | Beginner-friendly hosting |
-| **CloudPanel** | 🆓 Freeware | Nginx | Debian / Ubuntu | ✅ Yes | ❌ No | ❌ No | Cloud VPS PHP hosting |
-| **TinyCP** | 🆓 Freeware | Apache / Nginx | Linux | ❌ No | ⚠️ Partial | ⚠️ Partial | Lightweight VPS admin |
-| **KeyHelp** | 🆓 Freeware | Apache / Nginx | Debian / Ubuntu | ❌ No | ✅ Yes | ✅ Yes | Traditional shared hosting |
+
+| 🛠️ Control Panel | 🔓 Open Source       | 🌐 Web Server Support        | 🐧 OS Support            | 📦 Docker / Containers | 📧 Email Hosting | 🌍 DNS Management | 🎯 Best Use Case            |
+| ---------------- | -------------------- | ---------------------------- | ------------------------ | ---------------------- | ---------------- | ----------------- | --------------------------- |
+| **aaPanel**      | ✅ Yes               | Nginx, Apache, OpenLiteSpeed | CentOS / Debian / Ubuntu | ✅ Yes                 | ✅ Yes           | ✅ Yes            | Easy LAMP/LNMP management   |
+| **HestiaCP**     | ✅ Yes               | Nginx + Apache               | Debian / Ubuntu          | ⚠️ Community support   | ✅ Yes           | ✅ Yes            | Lightweight shared hosting  |
+| **ISPConfig**    | ✅ Yes               | Apache, Nginx, Lighttpd      | Debian / Ubuntu / CentOS | ⚠️ Emerging support    | ✅ Yes           | ✅ Yes            | Multi-server shared hosting |
+| **ApisCP**       | 🟡 Core OSS / 💰 Pro | Apache                       | CentOS / AlmaLinux       | ✅ Yes                 | ✅ Yes           | ✅ Yes            | Enterprise-grade hosting    |
+| **Spikster**     | ✅ Yes               | Nginx                        | Linux VPS / Cloud        | ✅ Yes                 | ✅ Yes           | ✅ Yes            | Modern PHP app hosting      |
+| **Virtualmin**   | ✅ Yes               | Apache / Nginx               | Debian / CentOS          | ⚠️ Partial             | ✅ Yes           | ✅ Yes            | Flexible enterprise panel   |
+| **VitoDeploy**   | ✅ Yes               | Nginx                        | Ubuntu                   | ✅ Yes                 | ❌ No            | ❌ No             | Docker-first deployments    |
+| **CyberPanel**   | ✅ Yes               | OpenLiteSpeed                | CentOS / Ubuntu          | ✅ Yes                 | ✅ Yes           | ✅ Yes            | High-performance hosting    |
+| **Coolify**      | ✅ Yes               | Reverse proxy based          | Ubuntu / Debian          | ✅ Yes                 | ❌ No            | ❌ No             | Self-hosted PaaS            |
+| **FASTPANEL**    | 🆓 Freeware          | Nginx                        | Debian / Ubuntu          | ⚠️ Limited             | ✅ Yes           | ✅ Yes            | Beginner-friendly hosting   |
+| **CloudPanel**   | 🆓 Freeware          | Nginx                        | Debian / Ubuntu          | ✅ Yes                 | ❌ No            | ❌ No             | Cloud VPS PHP hosting       |
+| **TinyCP**       | 🆓 Freeware          | Apache / Nginx               | Linux                    | ❌ No                  | ⚠️ Partial       | ⚠️ Partial        | Lightweight VPS admin       |
+| **KeyHelp**      | 🆓 Freeware          | Apache / Nginx               | Debian / Ubuntu          | ❌ No                  | ✅ Yes           | ✅ Yes            | Traditional shared hosting  |
 
 ### 🔑 Legend
 
@@ -284,158 +287,257 @@ Here's a table with the most famous Control Panels available as well as some lin
 - 🆓 **Freeware (not fully open source)**
 - 💰 **Paid / commercial option available**
 
-### 7.2 More Documentation Links 
+### 7.2 More Documentation Links
+
 Cloudpanel Article: [Cloudpanel Official Website](https://www.cloudpanel.io/blog/8-best-free-cpanel-open-source-alternatives/)\
 Github Article by mic7811: [Github Link](https://github.com/mic7811/web-hosting-control-panels)\
 aaPanel Article: [aaPanel Official Website](https://www.aapanel.com/blog/top-10-list-of-free-web-control-panels-and-their-key-features/)
 
 ### 7.3 Personal Choice
-For my control panel, I chose to use **aaPanel**. This Panel has both a *free* and a *paid* version, however there aren't really that different. I will choose the **free version**. ***Why did I choose aaPanel?***
+
+For my control panel, I chose to use **aaPanel**. This Panel has both a _free_ and a _paid_ version, however there aren't really that different. I will choose the **free version**. **_Why did I choose aaPanel?_**
+
 #### Key features:
+
 - One-Clipck App Installation.
 - Resouirce Monitoring.
 - Automated Backups.
 - Open-source.
-- Notifications automatisation. 
+- Notifications automatisation.
+
 #### Other features:
+
 - It's free.
 - It has quite a few plugins that are easy to install.
 - Modern look & intuitive interface.
 - Easy to understand and lightweight.
 
 ### 7.4 aaPanel Instalation
+
 1. Connect to your Raspberry Pi via SSH **like you did in step 2** in **6. Installing NGINX**.
-2. Type the following command: 
+2. Type the following command:
+
 ```
 sudo bash install_panel_en.sh ipssl
 ```
-3. When prompted if you want to **install aaPanel to the /www directory**, type ***y*** and press enter.
-![PI ssh connection](imgs/cmd9.png)
-    >⚠️ NOTE ⚠️\
-We will receive a message saying: *Web service is already installed*. That is **completely okay**, and it appears because we have already installed NGINX.\
-Type **yes** and press enter to continue the installation.
-![PI ssh connection](imgs/cmd10.png)
+
+3. When prompted if you want to **install aaPanel to the /www directory**, type **_y_** and press enter.
+   ![PI ssh connection](imgs/cmd9.png) >⚠️ NOTE ⚠️\
+   We will receive a message saying: _Web service is already installed_. That is **completely okay**, and it appears because we have already installed NGINX.\
+   Type **yes** and press enter to continue the installation.
+   ![PI ssh connection](imgs/cmd10.png)
 
 4. Wait for the installation. This will take about 15-20 minutes, so be patient and **DO NOT PRESS CTRL+C** - this will stop everything.
-5. Once installation is done, you will see these messages: 
-![PI ssh connection](imgs/cmd11.png)
->**Parts of the aaPanel URL has been censored. Those ports, access keys, username and password will be different, and they represent a security risk. Keep them safe and private.**
-6. ***Congratulations!*** You have just installed **aaPanel** on your Raspberry Pi.
+5. Once installation is done, you will see these messages:
+   ![PI ssh connection](imgs/cmd11.png)
+   > **Parts of the aaPanel URL has been censored. Those ports, access keys, username and password will be different, and they represent a security risk. Keep them safe and private.**
+6. **_Congratulations!_** You have just installed **aaPanel** on your Raspberry Pi.
+
 ### 7.5 aaPanel Configuration
-It is now time to ***access and configure*** the aaPanel. The username and password can be a bit annoying to remember, so let's go ahead and set them up however we like.
+
+It is now time to **_access and configure_** the aaPanel. The username and password can be a bit annoying to remember, so let's go ahead and set them up however we like.
+
 1. Click on the **aaPanel Internal Address Link.** (try ctrl+click if normal click doesn't work)
-2. Your browser will now open the link. *If you're getting this message*, click on "Show Advanced" and click on "Proceed to x.x.x.x (unsafe).
-![aaPanel Configuration](imgs/aap1.png)
->⚠️ NOTE ⚠️: If there's no "Show Advanced" button, just click anywhere in the browser window and type "thisisunsafe" with no spaces.
+2. Your browser will now open the link. _If you're getting this message_, click on "Show Advanced" and click on "Proceed to x.x.x.x (unsafe).
+   ![aaPanel Configuration](imgs/aap1.png)
+   > ⚠️ NOTE ⚠️: If there's no "Show Advanced" button, just click anywhere in the browser window and type "thisisunsafe" with no spaces.
 3. Enter the username and password shown in the terminal to login, and click on the **Login** button.
-![aaPanel Configuration](imgs/aap2.png)
-4. Click on Finish to close the successful installation message. 
-![aaPanel Configuration](imgs/aap3.png)
-5. Click on "Skip" button for the WebServer Setup. We won't use this yet. 
-![aaPanel Configuration](imgs/aap4.png)
+   ![aaPanel Configuration](imgs/aap2.png)
+4. Click on Finish to close the successful installation message.
+   ![aaPanel Configuration](imgs/aap3.png)
+5. Click on "Skip" button for the WebServer Setup. We won't use this yet.
+   ![aaPanel Configuration](imgs/aap4.png)
 6. On the left-hand menu, scroll down and click on **Settings**. In the **Global** menu, find **Authentication & Security**, and click on "**Modify**" on Panel user.\
-![aaPanel Configuration](imgs/aap5.png)
+   ![aaPanel Configuration](imgs/aap5.png)
 7. Enter your **new** username and the password **(from the terminal)**, then click on Confirm.\
-![aaPanel Configuration](imgs/aap6.png)
+   ![aaPanel Configuration](imgs/aap6.png)
 8. Login with your **new** username and **password** (from the terminal).\
-![aaPanel Configuration](imgs/aap7.png)
+   ![aaPanel Configuration](imgs/aap7.png)
 9. Head back to **Settings** > **Global** > **Authentication & Security**, and click on Panel Password > **Modify**.\
-![aaPanel Configuration](imgs/aap8.png)
+   ![aaPanel Configuration](imgs/aap8.png)
 10. Enter the **old password first** (from the terminal), then enter the new password you want to set up for the panel, and click on **Confirm**.\
-![aaPanel Configuration](imgs/aap9.png)
+    ![aaPanel Configuration](imgs/aap9.png)
 11. Login once again with both your **new username and password**.\
-![aaPanel Configuration](imgs/aap10.png)
-12. ***Congratultions!*** You have successfuly configured your aaPanel with your desired username and password!
+    ![aaPanel Configuration](imgs/aap10.png)
+12. **_Congratultions!_** You have successfuly configured your aaPanel with your desired username and password!
 
 ### 7.6 aaPanel Website Creation.
+
 It is now time to create our first website! Kind of. Let me explain.\
 In **aaPanel**, we can create a website by allocating a web server. In our case, the web server we're using is **NGINX**. We're **not** making a website by the classic coding or one-click install, but we're letting aaPanel know that we have **one web server for ONE website**.\
 If it's too confusing, I promise you'll get the concept while practicing.
 
 **Question:** Why can't we create the website simply by uploading the webfiles that we have?\
-**Answer:** Because aaPanel is not a "one-click install" all-solutions software. It is a control panel that allows us to **host multiple websites on multiple web server engines**. This is also something called *"Shared Hosting"*.\
+**Answer:** Because aaPanel is not a "one-click install" all-solutions software. It is a control panel that allows us to **host multiple websites on multiple web server engines**. This is also something called _"Shared Hosting"_.\
 ![Web Hosting Explanaition](imgs/exp1.png)
 
-Let's go ahead and practice. 
+Let's go ahead and practice.
+
 1. On the left-hand menu, select **Website**.
-2. According to your needs, you will have to choose between *PHP Project*, *Node.js Project*, *Proxy Project*, *Go Project* or *Python Project*.\
-I will personally choose **PHP Project** for this tutorial.\
-![aaPanel Configuration](imgs/aap11.png)
-3. In the **PHP Project**, we have to choose between installing NGINX or Apache. 
->⚠️ NOTE ⚠️ You must choose the engine that fits your goals. Long story short: **Apache** is the older, very flexible web server, while **NGINX** is the newer, very fast and lightweight one ***(Sounds pretty convenient for our Raspberry Pi project, right?)***.  Here's a [comparasion article](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations) between the two of them.
-4. For my needs, I will install ***NGINX***. Click on ***Install NGINX*** button and then click on ***Quick install*** button. Make sure you are on the *latest version available from the version drop menu.\
-![aaPanel Configuration](imgs/aap12.png)
+2. According to your needs, you will have to choose between _PHP Project_, _Node.js Project_, _Proxy Project_, _Go Project_ or _Python Project_.\
+   I will personally choose **PHP Project** for this tutorial.\
+   ![aaPanel Configuration](imgs/aap11.png)
+3. In the **PHP Project**, we have to choose between installing NGINX or Apache.
+   > ⚠️ NOTE ⚠️ You must choose the engine that fits your goals. Long story short: **Apache** is the older, very flexible web server, while **NGINX** is the newer, very fast and lightweight one **_(Sounds pretty convenient for our Raspberry Pi project, right?)_**. Here's a [comparasion article](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations) between the two of them.
+4. For my needs, I will install **_NGINX_**. Click on **_Install NGINX_** button and then click on **_Quick install_** button. Make sure you are on the \*latest version available from the version drop menu.\
+   ![aaPanel Configuration](imgs/aap12.png)
 5. Wait for the NGINX to install. This will take around 10 minutes, so just be patient.\
-![aaPanel Configuration](imgs/aap13.png)
-6. Once finished, you will now see a red button with the text **NGINX X.XX.X**. If you hover that button, you will see the following options: *Start / Restart / Reload / Alarm Setting*. That means NGX has been sucessfully installed, but it's not running - and that's okay, we need to manually start it.\
-![aaPanel Configuration](imgs/aap14.png)
+   ![aaPanel Configuration](imgs/aap13.png)
+6. Once finished, you will now see a red button with the text **NGINX X.XX.X**. If you hover that button, you will see the following options: _Start / Restart / Reload / Alarm Setting_. That means NGX has been sucessfully installed, but it's not running - and that's okay, we need to manually start it.\
+   ![aaPanel Configuration](imgs/aap14.png)
 7. Click on "**Add site**".\
-![aaPanel Configuration](imgs/aap15.png)
+   ![aaPanel Configuration](imgs/aap15.png)
 8. In the following screen, make sure you type the domain **and all subdomains** you want for your website. In my case, I want to use **michaelpanica.dev**, **www.michaelpanica.dev**, and **admin.michaelpanica.dev** to access the aaPanel remotely. **Make sure to also enable "Apply for SSL"**.
+
 - For the **Description** and **Website Path** sections, let it complete automatically. Don't change anything.\
-![aaPanel Configuration](imgs/aap16.png)
+  ![aaPanel Configuration](imgs/aap16.png)
 - You can create an **FTP (File Transfer Protocol)** to easily transfer files. You can do this in the following step:
 
 9. **FTP (File Transfer Protocol**. Click on "FTP is not installed, Click to install".\
-![aaPanel Configuration](imgs/aap17.png)
+   ![aaPanel Configuration](imgs/aap17.png)
 10. **FTP (File Transfer Protocol** Select the latest version of Pure-Ftpd and click **install now**.\
-![aaPanel Configuration](imgs/aap18.png)
+    ![aaPanel Configuration](imgs/aap18.png)
 11. Wait for the installation to finish.\
-![aaPanel Configuration](imgs/aap19.png)
+    ![aaPanel Configuration](imgs/aap19.png)
 12. When finished, the Messages box will now be empty saying "Currently no tasks!". Close this menu and return to the previous menu.\
-![aaPanel Configuration](imgs/aap20.png)
+    ![aaPanel Configuration](imgs/aap20.png)
 13. Here, on the "**FTP**" section, click on "**Not create**" and change it to "**Create**".\
-![aaPanel Configuration](imgs/aap22.png)
+    ![aaPanel Configuration](imgs/aap22.png)
 14. In **FTP Settings** and **Password** fields, change them to your likings. You will use these to login via FTP and transfer files.\
-![aaPanel Configuration](imgs/aap23.png)
+    ![aaPanel Configuration](imgs/aap23.png)
 15. Make sure that:
+
 - Database is not created (unless you need one).
 - PHP Version is **Static**.
 - Site Category is **Default Category**.
 - Create HTML File is **enabled**.
-16. Click on **Confirm** to create the first website. 
+
+16. Click on **Confirm** to create the first website.
 17. When you see this message, that means you have created your first website! **Congratulations!**. The username and password are to connect to FTP.\
-![aaPanel Configuration](imgs/aap24.png)
+    ![aaPanel Configuration](imgs/aap24.png)
 
 **Congratulations!** You have just installed your first website!
 
 ## 8. Port Forwarding
+
 In order for our visitors to access our website, we must make the Raspberry Pi discoverable for WAN traffic. At the moment, it can only be accessed on our internal network. We can access the website by the **local IP** (192.168.1.1 for example), but we're not able to use the **public IPv4**.\
 ![Port Forwarding Explained](imgs/pf2.png)
 
-In order to do that, we have to do some tweaks in our Router to make the port reachable. 
+In order to do that, we have to do some tweaks in our Router to make the port reachable.
 
 1. On Windows, open **Command Prompt**.
 2. Type the following command and press **enter**:
+
 ```
 ipconfig
 ```
+
 3. Find **Default Gateway**, copy the IP starting with 192. and paste the IP in a browser window.
-![Windows CMD](imgs/cmd12.png)
+   ![Windows CMD](imgs/cmd12.png)
 4. Login to your ISP Device (router) by using the password. Normally the password should be on the router itself. **Interface will look different depending on the manufacturer**.\
-![Port Forwarding](imgs/pf3.png)
-5. Navigate your router and find something port-forwarding related. If you can't find it, google your router model. For my **specific Fritz!Box model**, I can find Port Sharing (also called Port Forwarding) in ***Internet > Permit Access > Port Sharing***.
-![Port Forwarding](imgs/pf4.png)
-6. Click on **Add device for sharing** 
+   ![Port Forwarding](imgs/pf3.png)
+5. Navigate your router and find something port-forwarding related. If you can't find it, google your router model. For my **specific Fritz!Box model**, I can find Port Sharing (also called Port Forwarding) in **_Internet > Permit Access > Port Sharing_**.
+   ![Port Forwarding](imgs/pf4.png)
+6. Click on **Add device for sharing**
 7. In the Device menu, select your Raspberry Pi. The name will be the same as you gave it to the hostname in the OS Installation steps.\
-![Port Forwarding](imgs/pf5.png)
-8. Click on **New Sharing**. 
+   ![Port Forwarding](imgs/pf5.png)
+8. Click on **New Sharing**.
 9. Select HTTP Server if it asks you for an Application, or simply type **80 - 80** for ports and make sure you have Enabled Sharing enabled.\
-![Port Forwarding](imgs/pf6.png)
-![Port Forwarding](imgs/pf7.png)
+   ![Port Forwarding](imgs/pf6.png)
+   ![Port Forwarding](imgs/pf7.png)
 10. Click OK
 11. Click on "New Sharing" once again to add another port and Protocol.\
-![Port Forwarding](imgs/pf8.png)
+    ![Port Forwarding](imgs/pf8.png)
 12. This time select HTTPS Server with the ports being **443 - 443**, Enabled Sharing enabled.\
-![Port Forwarding](imgs/pf9.png)
+    ![Port Forwarding](imgs/pf9.png)
 13. Click OK again.
-14. Click on Apply. 
+14. Click on Apply.
 15. Depending on your interface, there should be a sign the ports are up and running. For my device, I have these green lights next to the names that are telling me that they're open and can be accessed.\
-![Port Forwarding](imgs/pf10.png)
+    ![Port Forwarding](imgs/pf10.png)
 16. **Time to test if we're online.** Head over to [portchecker](https://portchecker.co/).
 17. It should automatically take your Public (IPv4) IP. Type port 80 in the **Port number** tab and press **Check**. If you're getting a message saying "**Port 80 is OPEN**", then we're all good!\
-![Port Forwarding](imgs/pf11.png)
-18. Open an **incognito browser page** and type your public IP. 
+    ![Port Forwarding](imgs/pf11.png)
+18. Open an **incognito browser page** and type your public IP.
 19. You should now see the **Welcome to NGINX** page on your public IP.\
-![Port Forwarding](imgs/pf12.png)
-20. **Congratulations!** You have successfully opened the port for the webserver to be accessed online!
+    ![Port Forwarding](imgs/pf12.png)
+20. **Congratulations!** You have successfully opened the port for the webserver to be accessed online!\
+    Another way of testing if your website is accessible online is to go to your public IP on your phone. Make sure you **disable wifi** and you have your mobile data on. Simply **open a browser, type your public IP and click enter**.\
+    ![Mobile Access](imgs/mb.jpeg)
+
+## 9. Domain Registration & DNS Records.
+
+No one wants to access your website by typing the public IP. It is completely annoying and not practical. For this, we need something called a **domain**.\
+![Domain Explanaition](imgs/dom.png)
+
+### 9.1 Domain - FAQ
+
+- What is a Domain?
+  > A domain name is the unique web address people type into an internet browser to visit a website, such as google.com or bbc.co.uk. It acts as an easy-to-remember label for a computer server's numerical IP address.
+- Why does my website need a Domain?
+  > Every computer on the internet has a unique IP address (like 192.0.2.1), which is hard for people to remember. A domain name translates that complex string of numbers into a simple name using the Domain Name System (DNS)
+- Where can I get a domain?
+  > You can buy domain names from ICANN-accredited domain registrars, with top choices including Porkbun, Namecheap, and Cloudflare Registrar.
+- How much does a domain cost?
+  > Standard domain names typically cost between £10 and £20 per year for registration and renewal. Promotional first-year offers can drop as low as £0.75 to £3.99, while specialized or premium extensions can cost significantly more. It really depends on the Domain Registrars and the desired extension (.com, .dev, .car, etc.)
+
+**Popular Domain Registrars**
+
+- **Porkbun**: Known for low, transparent renewal prices and free privacy protection.
+- **Namecheap**: Offers affordable initial rates, bulk discounts, and a large suite of extra tools.
+- **Cloudflare Registrar**: Sells domains at wholesale cost with zero markup, focusing heavily on security.
+- **GoDaddy**: Best for searching through massive inventories or bidding on aftermarket/auctioned names.
+- **Wix or Squarespace**: Ideal if you want to bundle your domain registration directly with an all-in-one website builder.
+
+### 9.2 Domain Registration.
+
+1. Find a Domain Registrar that offers you the desired extension for a price you're happy to pay.
+2. For my case, I am using **Name.com**. They offer **free domains for students** (**_which is my case_**) - but check your University Student Benefits, as it might be different from University to University.
+3. Create an accont on the platform.
+4. Buy the desired domain.
+5. Log into your account.
+6. Select your domain and find a button called "**_Manage Domain_**".
+7. Find **_Manage DNS Records_**. For my **_Name.com_** panel, it looks like this:
+   ![DNS Records](imgs/dns1.png)
+8. Open your Terminal and **_connect to your Pi_** by using **_SSH_**.
+9. Type the following command:
+
+    ```
+    sudo bt 14
+    ```
+10. Click on the line that says this:
+    ```
+    aaPanel Internal Address: https://192.168.178.33:PORT/XXXXXX
+    ```
+    This should open a new browser where you can access your **_aaPanel_**. I recommend saving the page in a bookmark for easier access. 
+11. Login by using your username and password. 
+12. On the left side menu, copy your public IP.\
+![aaPanel](imgs/aap28.png)\
+13. Go back on your **_Manage DNS_** page and paste the IP at the **ANSWER** section. 
+    ![DNS Records](imgs/dns2.png)
+    - For the **_HOST_** section, you can leave it blank or type "**_@_**".
+    - For **TTL** you can leave it to **300**.
+    
+14. Click "**ADD RECORD**".
+15. Do the same step again, only that you must add ***www*** in the ***host*** section and public IP in the ***answer***.
+![DNS Records](imgs/dns3.png) 
+16. Click "**ADD RECORD**".
+>If you are trying to navigate to your website, you might get an error saying **the website refused to connect**. That is ***because you don't have an SSL installed*** on your domains. We'll have it fixed in the next 17-25 steps.
+![DNS Records](imgs/error.png) 
+17. Return to **aaPanel** and click on **Website**.
+18. Start NGINX by pressing the **Start** button.
+![aaPanel](imgs/aap29.png)
+19. On the left-hand menu, click on **Domains**.
+20. Create an account or login with your **Google Account**. 
+![aaPanel](imgs/aap30.png)\
+![aaPanel](imgs/aap31.png)
+21. Head back to **Website** menu, click on **Not set**.
+![aaPanel](imgs/aap32.png)
+22. Click on **Lets Encrypt**, select **File Verification**, **select all the Domain names you have set up** (I recommend using both www and simple domain), then click **Apply**
+![aaPanel](imgs/aap33.png)
+23. Wait for the installation. This will install SSL (**Secure Sockets Layer**) for your domains.
+24. Once finished you will see the following screen. This means your domains are now secured and have an **SSL installed**. 
+![aaPanel](imgs/aap34.png)
+25. Close the menu. 
+26. Head back to your website. You should now see this page. 
+![Website Created Successfully](imgs/message.png)
+**Congratulations!** Your website is now up, running and accessible for everyone through your domain!  
