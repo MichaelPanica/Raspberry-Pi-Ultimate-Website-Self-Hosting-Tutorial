@@ -541,3 +541,40 @@ No one wants to access your website by typing the public IP. It is completely an
 26. Head back to your website. You should now see this page. 
 ![Website Created Successfully](imgs/message.png)
 **Congratulations!** Your website is now up, running and accessible for everyone through your domain!  
+>Make sure you verify your website like you did before. **Open an incognito window and/or use your mobile phone on mobile data**. 
+### 9.3 Creating a Panel subomain. 
+You'll probably want to access your panel from everywhere around the world, not just your local wifi. For this, we'll have to make a **new subdomain** and setup the DNS records for it as well.
+1. Head to **Website** menu. 
+2. Click on **Conf** button on the right side.
+3. Click on **Domain Manager**
+4. Add a new subdomain. This can be anything you wish. For my example, I will use **panel.michaelpanica.dev**. 
+5. Click on **Add**.
+![aaPanel](imgs/aap35.png)
+6. You should now see your new subdomain in the **Domain Name** list with the **port 80**. 
+![aaPanel](imgs/aap36.png)
+7. Head back to your **Domain Registrar** (**name.com in my case**).
+8. Log into your account.
+9. Find your domain and click on a button to manage it. 
+10. Find "**Manage DNS Records**" button.
+11. Select **Type A**, and in the **host** section type your subdomain. As mine is **Panel**, i will simply type **panel**. For the **Answer**, simply put your public IP again. 
+![DNS Setup](imgs/dns4.png)
+12. Click **Add Record**.
+Now we need to install an SSL for the new subdomain that we have. 
+13. Head back to **aaPanel**.
+14. Find **Domains** in the left-hand menu.
+15. Click on **SSL Certificate** > **Let's Encrypt**
+![aaPanel](imgs/aap37.png)
+16. Find your **panel encryption** and click on **Manage**. 
+![aaPanel](imgs/aap38.png)
+17. Click on **Panel** and click on **Deploy**
+![aaPanel](imgs/aap39.png)
+18. **Wait** for the SSL to be installed on the **panel subdomain**. If the page keeps loading, **refresh the page**.
+19. Head over to the panel URL. You should now see receive a message that the page is safe. **If it still shows *unsafe*, clear the cache of your browser, close your browser and try again**.
+20. Head over to **Settings** > **Network & Access**.
+21. Enter the panel subdomain and click **Save**.
+![aaPanel](imgs/aap40.png)
+22. Your panel will now refresh.
+23. Enter your panel URL in the **Your Domain Name** in the input box and click **Click to jump**.
+![aaPanel](imgs/aap41.png)
+
+TO DO: Port Forward for the Panel Port.
